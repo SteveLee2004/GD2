@@ -1,0 +1,33 @@
+/* p{
+    color: red;
+}
+
+h1{
+    color: black;
+    font-family: helvetica;
+    font-size: 500px;
+}
+
+h3{
+    font-family: helvetica;
+} */
+
+.q_and_a {
+    width:350px;
+    margin:auto;
+
+}
+
+.question {
+    font-weight: bold;
+    text-transform: uppercase;
+    text-indent: -100px;
+    letter-spacing: 0.25em;
+
+}
+
+.answer {
+    text-transform: lowercase;
+    font-family:"helvetica";
+
+}
