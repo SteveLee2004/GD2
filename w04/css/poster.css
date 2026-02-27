@@ -1,0 +1,12 @@
+
+.body{
+    background-color: blue;
+}
+
+.p{
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family:'Times New Roman', Times, serif;
+    margin: auto;
+    text-align: center;
+}
