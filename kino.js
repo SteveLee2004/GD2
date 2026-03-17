@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-    // [1] 데이터 구조: 각 포맷과 영화 정보를 객체 형태로 정리 (하드코딩 방지)
     const archiveData = {
         "16mm": {
             summary: "16mm film is a historically popular and economical gauge of film...",
@@ -89,69 +88,55 @@ $(document).ready(function() {
 
             ]
          }
-        // VistaVision, IMAX 등도 동일한 구조로 추가 가능
     };
     
-
-    // [2] 글로벌 내비게이션 로직 (SPA 방식)
     $(".sidebar a").click(function(e) {
         e.preventDefault();
         const targetId = $(this).attr("id").replace("nav-", "section-");
         
-        $(".page-section").hide(); // 모든 섹션 숨기기
-        $("#" + targetId).show();   // 클릭한 섹션만 보이기
+        $(".page-section").hide(); 
+        $("#" + targetId).show();   
 
-        // 만약 ARCHIVE를 눌렀다면 상세 뷰를 닫고 기본 리스트를 보여줌 (리셋 기능)
         if(targetId === "section-archive") {
             $("#archive-detail").hide();
             $("#archive-default").show();
         }
     });
-
-    // [3] 아카이브 포맷 클릭 시 (상세 뷰 진입)
+ 
     $(".format-box").click(function() {
-        const format = $(this).data("format"); // '16mm', '35mm' 등 값 가져오기
+        const format = $(this).data("format"); 
         const data = archiveData[format];
 
-        // 기본 리스트 숨기고 상세 뷰 보이기
         $("#archive-default").hide();
         $("#archive-detail").show();
 
-        // 좌측/중앙 정보 업데이트
         $("#format-title").html(format + " film");
         $("#format-summary").html(data.summary);
         
-        // 영화 리스트 생성
         $("#movie-list").empty();
         data.movies.forEach((movie, index) => {
             $("#movie-list").append(`<li data-format="${format}" data-index="${index}">${movie.title}</li>`);
         });
 
-        // 첫 번째 영화 자동 선택
         $("#movie-list li").first().click();
     });
 
-    // [4] 영화 리스트 클릭 시 (우측 콘텐츠 업데이트)
     $(document).on("click", "#movie-list li", function() {
         const format = $(this).data("format");
         const index = $(this).data("index");
         const movie = archiveData[format].movies[index];
 
-        // 액티브 클래스 변경
         $("#movie-list li").removeClass("active");
         $(this).addClass("active");
 
-        // 메타 데이터 업데이트
         $("#movie-title").html(movie.title);
         $("#movie-info").html(`${movie.director}, ${movie.year}`);
 
-        // 장면 이미지 렌더링 (해당 포맷의 비율 클래스 적용)
         $("#movie-frames").empty();
         movie.frames.forEach(src => {
             $("#movie-frames").append(`<img src="${src}" class="frame-${format}">`);
         });
 
-        // 스크롤을 상단으로 초기화
         $(window).scrollTop(0);
     });
 
