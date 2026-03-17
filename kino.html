@@ -3,11 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kino</title>
+    <title>KINO</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="https://use.typekit.net/kxx4vnz.css">
 </head>
-<h1>KINO</h1>
-
 <body>
-    
+    <nav class="sidebar">
+        <ul>
+            <li><a href="#home" id="nav-home">HOME</a></li>
+            <li><a href="#archive" id="nav-archive">ARCHIVE</a></li>
+            <li><a href="#journal" id="nav-journal">JOURNAL</a></li>
+            <li><a href="#about" id="nav-about">ABOUT</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <section id="section-home" class="page-section" style="display: none;">
+            <h1>HOME</h1>
+        </section>
+
+        <section id="section-archive" class="page-section">
+
+            <div id="archive-default">
+                <div class="format-box" id="box-16mm" data-format="16mm"></div>
+                <div class="format-box" id="box-35mm" data-format="35mm"></div>
+                <div class="format-box" id="box-vistavision" data-format="vistavision"></div>
+                <div class="format-box" id="box-imax" data-format="imax"></div>
+            </div>
+
+            <div id="archive-detail" style="display: none;">
+                <div class="detail-left">
+                    <div id="selected-format-box"></div>
+                    <p id="format-summary"></p>
+                </div>
+
+                
+
+<script src="kino.js"></script>
 </body>
 </html>
