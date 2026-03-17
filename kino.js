@@ -56,7 +56,7 @@ $(document).ready(function() {
             ]
         },
 
-        "vistavision": {
+        "VistaVision": {
             summary: "VistaVision is a higher resolution, widescreen variant of the 35mm motion picture film format which was created by engineers at Paramount Pictures in 1954. It uses a horizontal orientation of the film, allowing for a larger image area and improved image quality compared to standard 35mm film.",
             movies: [
                 { title: "White Christmas", director: "Michael Curtiz", type: "color", year: 1954, frames: ["white1.jpg", "white2.jpg"] },
@@ -73,7 +73,7 @@ $(document).ready(function() {
             ]
          },
 
-         "imax": {
+         "IMAX": {
             summary: "IMAX is a proprietary system of high-resolution cameras, film formats, film projectors, and theaters known for having very large screens with a tall aspect ratio and steep stadium seating. The IMAX format allows for greater image resolution and clarity compared to traditional formats.",
             movies: [
                 { title: "Tiger Child", director: "Donald Brittain", type: "color", year: 1970, frames: ["tiger1.jpg", "tiger2.jpg"] },

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KINO</title>
+    <title>KINO Archive</title>
     <link rel="stylesheet" href="css.css">
     <link rel="stylesheet" href="https://use.typekit.net/kxx4vnz.css">
 </head>
@@ -23,10 +23,11 @@
         </section>
 
         <section id="section-archive" class="page-section">
-
+            
             <div id="archive-default">
                 <div class="format-box" id="box-16mm" data-format="16mm"></div>
                 <div class="format-box" id="box-35mm" data-format="35mm"></div>
+                <div class="format-box" id="box-70mm" data-format="70mm"></div>
                 <div class="format-box" id="box-vistavision" data-format="vistavision"></div>
                 <div class="format-box" id="box-imax" data-format="imax"></div>
             </div>
@@ -36,9 +37,23 @@
                     <div id="selected-format-box"></div>
                     <p id="format-summary"></p>
                 </div>
-
                 
+                <div class="detail-center">
+                    <h1 id="format-title"></h1>
+                    <ul id="movie-list"></ul>
+                </div>
 
-<script src="kino.js"></script>
+                <div class="detail-right">
+                    <h2 id="movie-title"></h2>
+                    <p id="movie-info"></p>
+                    <div id="movie-frames"></div>
+                </div>
+            </div>
+        </section>
+        
+        </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="kino.js"></script>
 </body>
 </html>
