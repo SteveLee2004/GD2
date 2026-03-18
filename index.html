@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/kxx4vnz.css">
 </head>
 <body>
+
     <nav class="sidebar">
         <ul>
             <li><a href="#home" id="nav-home">HOME</a></li>
@@ -18,18 +19,38 @@
     </nav>
 
     <main class="content">
+
         <section id="section-home" class="page-section" style="display: none;">
             <h1>HOME</h1>
         </section>
 
         <section id="section-archive" class="page-section">
             
-            <div id="archive-default">
-                <div class="format-box" id="box-16mm" data-format="16mm"></div>
-                <div class="format-box" id="box-35mm" data-format="35mm"></div>
-                <div class="format-box" id="box-70mm" data-format="70mm"></div>
-                <div class="format-box" id="box-vistavision" data-format="vistavision"></div>
-                <div class="format-box" id="box-imax" data-format="imax"></div>
+            <div id="archive-default" class="format-list">
+                <div class="format-box" id="box-16mm" data-format="16mm">
+                    <span class="name">16mm</span>
+                    <div class="ratio-box frame-16mm"></div> 
+                </div>
+
+                <div class="format-box" id="box-35mm" data-format="35mm">
+                    <span class="name">35mm</span>
+                    <div class="ratio-box frame-35mm"></div>
+                </div>
+
+                <div class="format-box" id="box-vistavision" data-format="vistavision">
+                    <span class="name">VistaVision</span>
+                    <div class="ratio-box frame-vistavision"></div>
+                </div>
+
+                <div class="format-box" id="box-70mm" data-format="70mm">
+                    <span class="name">70mm ( 65mm )</span>
+                    <div class="ratio-box frame-70mm"></div>
+                </div>
+
+                <div class="format-box" id="box-imax" data-format="imax">
+                    <span class="name">IMAX</span>
+                    <div class="ratio-box frame-imax"></div>
+                </div>
             </div>
 
             <div id="archive-detail" style="display: none;">
@@ -37,21 +58,32 @@
                     <div id="selected-format-box"></div>
                     <p id="format-summary"></p>
                 </div>
-                
+
                 <div class="detail-center">
                     <h1 id="format-title"></h1>
-                    <ul id="movie-list"></ul>
-                </div>
+                    <ul id="movie-list"></ul> </div>
 
                 <div class="detail-right">
                     <h2 id="movie-title"></h2>
-                    <p id="movie-info"></p>
-                    <div id="movie-frames"></div>
-                </div>
+
+                    <div id="movie-info">
+                        <div class="info-director"></div>
+                        <div class="info-year"></div>
+                        <div class="info-type"></div>
+                    </div>
+
+                <div id="movie-frames"></div> </div>
             </div>
+
+        </section> <section id="section-journal" class="page-section" style="display: none;">
+            <h1>JOURNAL</h1>
+        </section>
+
+        <section id="section-about" class="page-section" style="display: none;">
+            <h1>ABOUT</h1>
         </section>
         
-        </main>
+    </main>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="kino.js"></script>
