@@ -23,8 +23,8 @@ $(document).ready(function() {
                 { title: "SQUID AND THE WHALE", director: "Noah Baumbach", type: "Color", year: 2005, frames: ["squid-images/squid1.png", "squid2.jpg"] },
                 { title: "MOONRISE KINGDOM", director: "Wes Anderson", type: "Color", year: 2012, frames: ["moonrise-images/moonrise1.png"]},
                 { title: "MOTHER!", director: "Darren Aronofsky", type: "Color", year: 2017, frames: ["mother-images/mother1.png", "mother2.jpg"] },
-                { title: "MID90S", director: "Jonah Hill", type: "Color", year: 2018, frames: ["mid90s1.jpg", "mid90s2.jpg"] },
-                { title: "THE SMASHING MACHINE", director: "Benny Safdie", type: "Color", year: 2025, frames: ["smashing1.jpg", "smashing2.jpg"] }
+                { title: "MID90S", director: "Jonah Hill", type: "Color", year: 2018, frames: ["mid-images/mid1.png", "mid90s2.jpg"] },
+                { title: "THE SMASHING MACHINE", director: "Benny Safdie", type: "Color", year: 2025, frames: ["smashing-images/smashing1.png", "smashing2.jpg"] }
             ]
         },
         "35mm": {
