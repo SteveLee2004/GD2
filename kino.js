@@ -21,7 +21,7 @@ $(document).ready(function() {
                 { title: "THE BLAIR WITCH PROJECT", director: "Daniel Myrick, Eduardo Sánchez", type: "Color / Black & white", year: 1999, frames: ["blair-images/blairwitch1.png", "blair2.jpg"] },
                 { title: "CITY OF GOD", director: "Fernando Meirelles & Kátia Lund", type: "Color", year: 2002, frames:["city-of-images/city-of1.png"]},
                 { title: "SQUID AND THE WHALE", director: "Noah Baumbach", type: "Color", year: 2005, frames: ["squid-images/squid1.png", "squid2.jpg"] },
-                { title: "MOONRISE KINGDOM", director: "Wes Anderson", type: "Color", year: 2012, frames: []},
+                { title: "MOONRISE KINGDOM", director: "Wes Anderson", type: "Color", year: 2012, frames: ["moonrise-images/moonrise1.png"]},
                 { title: "MOTHER!", director: "Darren Aronofsky", type: "Color", year: 2017, frames: ["mother1.jpg", "mother2.jpg"] },
                 { title: "MID90S", director: "Jonah Hill", type: "Color", year: 2018, frames: ["mid90s1.jpg", "mid90s2.jpg"] },
                 { title: "THE SMASHING MACHINE", director: "Benny Safdie", type: "Color", year: 2025, frames: ["smashing1.jpg", "smashing2.jpg"] }
