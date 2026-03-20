@@ -34,6 +34,7 @@ $(document).ready(function() {
                 { title: "WIZARD OF OZ", director: "Victor Fleming", type: "Color", year: 1939, frames: ["oz-images/oz1.png", "wind2.jpg"] },
                 { title: "CITIZEN KANE", director: "Orson Welles", type: "Black & white", year: 1941, frames: ["kane-images/kane1.png", "kane2.jpg"] },
                 { title: "SUNSET BOULEVARD", director: "Billy Wilder", type: "Black & white", year: 1950, frames: ["sunset-images/sunset1.png", "sunset2.jpg"] },
+                { title: "THE NIGHT OF THE HUNTER", director: "Charles Laughton", type: "Black & white", year: 1955, frames: ["hunter-images/hunter1.png"]},
                 { title: "FROM RUSSIA WITH LOVE", director: "Terence Young", type: "Color", year: 1963, frames: ["russia-images/russia1.png", "russia2.jpg"] },
                 { title: "THE HARD DAY'S NIGHT", director: "Richard Lester", type: "Black & white", year: 1964, frames: ["hard-images/hard1.png"]},
                 { title: "BULLITT", director: "Peter Yates", type: "Color", year: 1968, frames:["bullitt-images/bullitt1.png"]},
