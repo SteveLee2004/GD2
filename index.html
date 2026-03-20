@@ -11,8 +11,7 @@
 
     <nav class="sidebar">
         <ul>
-            <li><a href="#home" id="nav-home">HOME</a></li>
-            <li><a href="#archive" id="nav-archive">ARCHIVE</a></li>
+            <li><a href="#archive" id="nav-archive">FORMATS</a></li>
             <li><a href="#journal" id="nav-journal">JOURNAL</a></li>
             <li><a href="#about" id="nav-about">ABOUT</a></li>
         </ul>
@@ -20,58 +19,53 @@
 
     <main class="content">
 
-        <section id="section-home" class="page-section" style="display: none;">
-            <h1>HOME</h1>
-        </section>
 
         <section id="section-archive" class="page-section">
             
             <div id="archive-default" class="format-list">
                 <div class="format-box" id="box-16mm" data-format="16mm">
-                    <span class="name">16mm</span>
                     <div class="ratio-box frame-16mm"></div> 
                 </div>
 
                 <div class="format-box" id="box-35mm" data-format="35mm">
-                    <span class="name">35mm</span>
                     <div class="ratio-box frame-35mm"></div>
                 </div>
 
-                <div class="format-box" id="box-vistavision" data-format="vistavision">
-                    <span class="name">VistaVision</span>
+                <div class="format-box" id="box-vistavision" data-format="VistaVision">
                     <div class="ratio-box frame-vistavision"></div>
                 </div>
 
                 <div class="format-box" id="box-70mm" data-format="70mm">
-                    <span class="name">70mm ( 65mm )</span>
                     <div class="ratio-box frame-70mm"></div>
                 </div>
 
-                <div class="format-box" id="box-imax" data-format="imax">
-                    <span class="name">IMAX</span>
+                <div class="format-box" id="box-imax" data-format="IMAX">
                     <div class="ratio-box frame-imax"></div>
                 </div>
             </div>
 
-            <div id="archive-detail" style="display: none;">
+            <div id="archive-detail" class="archive-detail" style="display: none;">
                 <div class="detail-left">
                     <div id="selected-format-box"></div>
-                    <p id="format-summary"></p>
                 </div>
 
                 <div class="detail-center">
                     <h1 id="format-title"></h1>
-                    <ul id="movie-list"></ul> </div>
+                </div>
 
                 <div class="detail-right">
-                    <h2 id="movie-title"></h2>
-
-                    <div id="movie-info">
-                        <div class="info-director"></div>
-                        <div class="info-year"></div>
-                        <div class="info-type"></div>
+                    <div class="right-top-section">
+                        <p id="format-summary"></p>
+                        <ul id="movie-list"></ul>
                     </div>
 
+                    <hr class="divider"><div class="right-bottom-section">
+                        <h2 id="movie-title"></h2>
+                        <div id="movie-info">
+                            <div class="info-director"></div>
+                            <div class="info-year"></div>
+                            <div class="info-type"></div>
+                    </div>
                 <div id="movie-frames"></div> </div>
             </div>
 
@@ -79,9 +73,34 @@
             <h1>JOURNAL</h1>
         </section>
 
-        <section id="section-about" class="page-section" style="display: none;">
-            <h1>ABOUT</h1>
-        </section>
+<div id="section-about" class="page-section" style="display: none;">
+        <div class="about-content">
+            <h1>KINO</h1>
+            <section>
+                <h3>WHAT IS KINO?</h3>
+                <p>KINO is an archive of film formats that have emerged throughout over a century of cinema.
+
+                It brings together the historical context and characteristics of each format, along with the distinct images produced by films shot in them.  
+                These formats are not merely specifications of cameras or the size of a theater screen.
+
+                Each format generates a different kind of image through its own texture, resolution, and frame.  
+                This goes beyond technical difference—it reshapes the very way we perceive cinema.
+
+                Texture, grain, resolution, frame size.  
+                These are not simply technical elements, but a language that constructs the image of film.
+
+                Cinema is not only defined by what it shows,  
+                but by how it is captured.
+
+                KINO documents film not in terms of what is shown,  
+                but how it is shown.
+
+                16mm, 35mm, 70mm, VistaVision, IMAX.  
+                Each format carries its own history and way of seeing. </p>
+            </section>
+        </div>
+</div>
+
         
     </main>
 

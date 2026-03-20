@@ -1,4 +1,5 @@
-* { margin: 0; 
+* { 
+    margin: 0; 
     padding: 0; 
     box-sizing: border-box; 
 }
@@ -6,7 +7,7 @@
 body {
     background-color: black;
     color: white;
-    font-family: "neue-haas-grotesk-text", sans-serif;
+    font-family: "runda", sans-serif;
     margin: 0;
     font-weight: 500;
     font-style: normal;
@@ -34,10 +35,6 @@ body {
     gap: 100px;
 } 
 
-.sidebar li { 
-    margin-bottom: 20px; 
-}
-
 .sidebar a {
     writing-mode: vertical-rl; 
     transform: rotate(180deg); 
@@ -46,13 +43,15 @@ body {
     font-size: 14px;
     letter-spacing: 3px;
     text-transform: uppercase;
-
 }
-
 
 .content { 
     margin-left: 150px; 
     width: calc(100% - 150px); 
+}
+
+#section-archive {
+    display: block; 
 }
 
 #archive-default {
@@ -63,16 +62,17 @@ body {
     padding: 100px 60px;
     gap: 50px;
 }
+
 .format-box {
     display: flex;
     align-items: center;
     gap: 40px;
+    width: 100%;
 }
 
-
-.format-box .name{
+.format-box .name {
     font-size: 1.2rem;
-    width: 220px;
+    width: 180px;
     text-align: left;
     text-transform: uppercase;
     font-weight: 500;
@@ -86,132 +86,151 @@ body {
     flex-shrink: 0;
 }
 
-.ratio-box:hover {
-    background-color: white;
+.ratio-box:hover { background-color: white; }
+
+.frame-16mm { aspect-ratio: 0.404 / 0.295; width: 60px; }
+.frame-35mm { aspect-ratio: 0.980 / 0.546; width: 100px; }
+.frame-VistaVision, .frame-vistavision { aspect-ratio: 1.495 / 0.991; width: 140px; }
+.frame-70mm { aspect-ratio: 2.066 / 0.906; width: 180px; }
+.frame-IMAX, .frame-imax { aspect-ratio: 2.772 / 2.072; width: 220px; }
+
+#archive-detail { 
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 450px; 
+    width: calc(100% - 450px);
+    height: 100vh;
+    overflow-y: auto;
+    padding: 80px 60px; 
+    z-index: 100;
 }
 
-
-.frame-16mm { aspect-ratio: 0.404 / 0.295; }
-.frame-35mm { aspect-ratio: 0.980 / 0.546; }
-.frame-vistavision { aspect-ratio: 1.495 / 0.991; }
-.frame-70mm { aspect-ratio: 2.066 / 0.906; }
-.frame-imax { aspect-ratio: 2.772 / 2.072; }
-
-#archive-default .frame-16mm { width: 0.404in; height: 0.295in; }
-#archive-default .frame-35mm { width: 0.980in; height: 0.546in; }
-#archive-default .frame-vistavision { width: 1.495in; height: 0.991in; }
-#archive-default .frame-70mm { width: 2.066in; height: 0.906in; }
-#archive-default .frame-imax { width: 2.772in; height: 2.072in; }
-
-.format-box{
-    width: 100%;
-}
-
-#selected-format-box {
+.detail-right { 
+    position: relative;
     width: 100%; 
-    height: auto !important;
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#format-title {
+    position: absolute;
+    left: 0;
+    width: 280px;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+#format-summary,
+#movie-list,
+#movie-title,
+#movie-info,
+#movie-frames {
+    margin-left: 320px !important; 
+    width: calc(100% - 320px);
 }
 
 #format-summary {
-    font-weight: 400;
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: #ccc;
+    margin-top: 5px; 
+    margin-bottom: 50px;
 }
 
-/* 
-#movie-frames img {
-    width: 100%; height: auto;
-    margin-bottom: 30px; display: block;
-    background-color: gray;
-} */
+#movie-list { 
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 10px 15px;
+    margin-bottom: 80px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+#movie-list li {
+    display: flex;
+    margin-bottom: 14px; 
+    cursor: pointer;
+    opacity: 0.5; 
+    transition: opacity 0.3s ease;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+#movie-list li:not(:last-child)::after{
+    content: "•";
+    margin-left: 15px;
+    opacity: 1;
+    pointer-events: none;
+
+}
+
+#movie-list li:hover, 
+#movie-list li.active {
+    opacity: 1; 
+    text-decoration: underline;
+}
+
+#movie-title {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    line-height: 1;
+}
+
+#movie-info {
+    margin-bottom: 60px; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+
+.info-director { 
+    font-size: 1.2rem; 
+    font-weight: 600; }
+
+.info-year, .info-type { 
+    font-size: 1rem; 
+    color: white; }
 
 #movie-frames img {
     width: 100%; 
     height: auto;
     display: block;
-    margin-bottom: 40px; 
-    background-color: #222; 
+    margin-bottom: 50px; 
+    background-color: #111; 
 }
 
-#movie-list { 
-    list-style: none; 
-    margin-top: 40px; }
+#selected-format-box { display: none; }
 
-#movie-list li {
-    margin-bottom: 10px; 
-    cursor: pointer;
-    opacity: 0.5; 
-    transition: opacity 0.3s ease;
-    outline: none;
-    -webkit-tap-highlight-color: transparent;
+#section-about{
+    padding: 100px 60px;
+    max-width: 600px;
 }
 
-#movie-list li:hover, #movie-list li.active {
-    opacity: 1; 
-    text-decoration: underline;
+#section-about h1{
+    font-size: 5rem;
+    margin-bottom: 60px;
+    border-bottom: 1px solid white;
 }
 
-#archive-detail { 
-    display: flex; 
-    width: 100%; 
-    align-items: flex-start; 
-    padding-top: 0 50px;
+.about-content section{
+    margin-bottom: 50px;
 }
 
-.detail-left, 
-.detail-center,
-.detail-right { 
-    position: sticky; 
-    top: 60px; 
-    padding: 0 40px; 
-    margin-top: 5px;
-}
-
-#selected-format-box,
-#format-title,
-#movie-list{
-    margin-top: 0;
-}
-
-#format-title{
-    margin-top: 0;
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.detail-left { width: 25%; }
-
-.detail-center { width: 25%; }
-
-.detail-right { 
-    width: 50%; 
-    padding-right: 40px;
-    padding-top: 0; }
-
-#movie-title {
-    margin-top: 0;
-    font-size: 2.5rem;
+.about-content h3 {
     text-transform: uppercase;
+    font-size: 0.9rem;
     margin-bottom: 15px;
+    color: orange;
 }
 
-#movie-info {
-    margin-bottom: 30px; 
-    display: flex;
-    flex-direction: column;
-    gap: 5px; 
-}
-
-.info-director {
-    font-size: 1.1rem;
-    font-weight: 600;
-}
-
-.info-year {
-    font-size: 0.95rem;
-    color: white; 
-}
-
-.info-type {
-    font-size: 0.85rem;
-    color: white;
+p {
+    font-weight: 200;
+    line-height: 1.5;
 }
